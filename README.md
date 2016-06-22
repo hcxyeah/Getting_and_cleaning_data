@@ -17,3 +17,13 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 3. Uses descriptive activity names to name the activities in the data set
 4. Appropriately labels the data set with descriptive variable names.
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+
+## Steps
+1. Load the data: train_x, train_y, test_x, text_y, features, subject, activity list.
+2. Rename the column names of train_x and test_x to the features list.
+3. Row bind the train_x and trann_y, test_x and test_y.
+4. Column bind train and test data into dt.
+5. Merge dt and activity list on activity id into data table final.
+6. Extract Mean and std measurement columns from table final into table meanstd.
+7. Labels the data set with descriptive variable names.
+8. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
