@@ -36,5 +36,5 @@ names(meanstd) <- gsub("BodyBody", "Body", names(meanstd))
 library(plyr)
 tidy_data <- ddply(meanstd, c("activity", "subject"), numcolwise(mean))
 tidy_data <- select(tidy_data, -activity_id)
-write.csv(tidy_data, file = "submit.csv")
+write.table(tidy_data, file = "submit.csv", row.names = FALSE)
 
